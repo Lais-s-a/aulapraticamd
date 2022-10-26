@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <time.h>
+#include <signal.h>
+#include <unistd.h>
+
 int primos(int n,int contador)
 {
     if(n == contador)
@@ -21,7 +24,7 @@ void saida(int sig)
 }
 int main()
 {
-    signal(SIGALARM,saida);
+    signal(SIGALARM, saida);
     alarm(60);
     primos(0,1);
 }
