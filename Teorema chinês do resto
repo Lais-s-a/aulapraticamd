@@ -1,0 +1,66 @@
+int chines(int al, int ml, int a2, int m2, int a3, int m3)
+
+{
+
+int M, M1, M2, M3, r1, r2, r3, s1, s2, s3, x; M = m1 * m2 * m3;
+
+M1 = M/ml;
+
+r1 = al; s1 congruencia (M1, 1, ml);
+
+printf("M: %d\n", M);
+
+M2 = M/m2;
+
+r2 = a2; s2= congruencia(M2, 1, m2);
+
+M3 = M/m3;
+
+r3 = a3;
+
+s3 congruencia (M3, 1, m3);
+
+printf("mx[]: %d %d %d\n", ml, m2, m3);
+
+printf("Mx[]: %d %d %d\n", M1, M2, M3); printf("Rx[]: %d %d %d\n", rl, r2, r3); printf("Sx[]: %d %d %d\n", s1, s2, s3);
+
+x = (M1 * r1 * s1) + (M2 * r2 * s2) + (M3 * r3 * $3);
+
+printf("x: %d\n", x);
+
+if (x > M)
+
+{ X = X % M; printf("x%%M: %d", x);
+
+} return x;
+
+}
+
+int main()
+
+ { 
+printf("-- Teorema Chinês do Resto --\n"); 
+
+printf("Xal(mod ml), X a2(mod m2), X = a3(mod m3)\n"
+
+int al, a2, a3, ml, m2, m3;
+
+printf("Insira al: "); scanf("%d", &al);
+
+printf("Insira ml: ");
+
+scanf("%d", &m1);
+
+printf("Insira a2: "); scanf("%d", &a2);
+
+printf("Insira m2: ");
+
+scanf("%d", &m2);
+
+printf("Insira a3: "); scanf("%d", &a3);
+
+printf("Insira m3: "); scanf("%d", &m3);
+
+printf("x = %d\n", chines(al, ml, a2, m2, a3, m3)); return 0;
+
+}
