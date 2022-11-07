@@ -1,0 +1,58 @@
+int congruencia(int a, int b, int m)
+
+{
+int nsolucoes;
+
+if (a > m)
+
+{
+
+nsolucoes = euclides (a, m);
+
+}
+
+else
+
+{
+
+nsolucoes = euclides (m, a);
+
+}
+
+if (b % nsolucoes == 0)
+
+{
+
+a = a/nsolucoes;
+
+b b/nsolucoes; =
+
+m = m/nsolucoes;
+
+int invers = inverso(a, m);
+
+while (invers <= a)
+
+{
+
+invers = invers + m;
+
+}
+
+int k = invers * b;
+
+int soll = k % m;
+
+return soll;
+
+}
+
+else
+
+{
+
+printf("Não há soluções possíves\n");
+
+}
+
+}
