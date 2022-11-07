@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int euclides (int a, int d)
+
+{
+
+int resto = a % d;
+
+if (resto == 0)
+
+{
+
+return d;
+
+}
+
+else
+
+{
+
+return euclides (d, resto);
+
+}
+
+}
+
+int quocientes(int a, int d, int cont)  {
+
+int resto = a % d;
+
+int quo = a/ d;
+
+cont = cont + 1;
+
+if (resto == 0 ) {
+
+}
+
+return cont;
+
+else
+
+{
+
+}
+
+return quocientes (d, resto, cont);
+
+}
