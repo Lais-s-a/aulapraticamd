@@ -1,0 +1,392 @@
+#include <stdio.h>
+
+int euclides (int a, int d)
+
+{
+
+int resto = a % d;
+
+if (resto == 0)
+
+{
+
+return d;
+
+}
+
+else
+
+{
+
+return euclides (d, resto);
+
+}
+
+}
+
+int quocientes(int a, int d, int cont)  {
+
+int resto = a % d;
+
+int quo = a/ d;
+
+cont = cont + 1;
+
+if (resto == 0 ) {
+
+}
+
+return cont;
+
+else
+
+{
+
+}
+
+return quocientes (d, resto, cont);
+
+}
+
+int inverso(int a, int d)
+
+int maior, menor; if (a > d)
+
+{
+
+maior = a;
+
+menor =
+
+d;
+
+}
+
+else
+
+{
+
+maior = d;
+
+}
+
+menor = a;
+
+int tam quocientes (maior, menor, 0);
+
+int resto, quoc;
+
+int arr[tam]; 
+
+int i = 0;
+
+while (menor != 0) 
+
+
+
+{
+
+resto maior %% menor;
+
+quoc = maior / menor;
+
+maior menor;
+
+menor = resto;
+
+arr[i]= quoc;
+
+i++;
+
+}
+
+int len = sizeof(arr)/sizeof(arr[0]); 
+
+int semultimo[len-2];
+
+for (int i; i <= len-2; i++) 
+
+{
+
+semultimo[i] = arr[i];
+
+}
+
+int inversa[len-2];
+
+int c = 0; for (int i = len-2; i >=0; i--) 
+
+{
+
+inversa[c] = semultimo[i];
+
+C++;
+
+}
+
+int results[len]; //lista dos resultados, que se forma a partir da lista inversa for (int i = 0; i <= len; i++) {
+
+if (i == 0)
+
+{
+
+results[0] 1; // o primeiro elemento é =
+
+sempre 1
+
+results[i+1] = inversa[i] * 1; // o segundo
+
+é o primeiro da inversa vezes 1
+
+} else
+
+{
+
+results[i+1] = (inversa[i] * results[i]) + results[i-1]; // formando o resto da lista
+
+}
+
+}
+
+int len2 = sizeof(arr)/sizeof(arr[0]); //tamanho da lista de resultados
+
+len2 = len2 -1;
+
+//interessam-nos o penúltimo e o último elementos
+
+int penultimo = results[len2-1];
+
+int ultimo = results[len2];
+
+int leninv = sizeof(inversa)/sizeof(inversa[0]); //tamanho da lista inversa dos quocientes
+
+leninv = leninv -1;
+
+int x, y;
+
+if (leniny % 2 == 0) // se o tamanho é par, temos
+
+penultimo *-1 {
+
+X = ultimo;
+
+y = penultimo *-1;
+
+if (a > d)
+
+{
+
+if (penultimo > ultimo)
+
+{
+
+}
+
+else
+
+return x;
+
+{
+
+}
+
+return y;
+
+}
+
+else if (a < d)
+
+{ } {
+
+if (penultimo { ultimo)
+
+return y;
+
+else
+
+return x;
+
+}
+
+}
+
+}
+
+}
+
+else //ultimo * -1 {
+
+y = penultimo;
+
+x = ultimo *-1;
+
+if (a > d)
+
+{
+
+if (penultimo > ultimo) {
+
+return x;
+
+}
+
+else
+
+{
+
+return y;
+
+}
+
+else if (a < d)
+
+{
+
+if (penultimo > ultimo)
+
+{
+
+return y;
+
+}
+
+else
+
+{
+
+return x;
+}
+
+}
+
+}
+
+}
+
+int congruencia(int a, int b, int m)
+
+{
+int nsolucoes;
+
+if (a > m)
+
+{
+
+nsolucoes = euclides (a, m);
+
+}
+
+else
+
+{
+
+nsolucoes = euclides (m, a);
+
+}
+
+if (b % nsolucoes == 0)
+
+{
+
+a = a/nsolucoes;
+
+b b/nsolucoes; =
+
+m = m/nsolucoes;
+
+int invers = inverso(a, m);
+
+while (invers <= a)
+
+{
+
+invers = invers + m;
+
+}
+
+int k = invers * b;
+
+int soll = k % m;
+
+return soll;
+
+}
+
+else
+
+{
+
+printf("Não há soluções possíves\n");
+
+}
+
+}
+
+
+
+int chines(int al, int ml, int a2, int m2, int a3, int m3)
+
+{
+
+int M, M1, M2, M3, r1, r2, r3, s1, s2, s3, x; M = m1 * m2 * m3;
+
+M1 = M/ml;
+
+r1 = al; s1 congruencia (M1, 1, ml);
+
+printf("M: %d\n", M);
+
+M2 = M/m2;
+
+r2 = a2; s2= congruencia(M2, 1, m2);
+
+M3 = M/m3;
+
+r3 = a3;
+
+s3 congruencia (M3, 1, m3);
+
+printf("mx[]: %d %d %d\n", ml, m2, m3);
+
+printf("Mx[]: %d %d %d\n", M1, M2, M3); printf("Rx[]: %d %d %d\n", rl, r2, r3); printf("Sx[]: %d %d %d\n", s1, s2, s3);
+
+x = (M1 * r1 * s1) + (M2 * r2 * s2) + (M3 * r3 * $3);
+
+printf("x: %d\n", x);
+
+if (x > M)
+
+{ X = X % M; printf("x%%M: %d", x);
+
+} return x;
+
+}
+
+int main()
+
+ { 
+printf("-- Teorema Chinês do Resto --\n"); 
+
+printf("Xal(mod ml), X a2(mod m2), X = a3(mod m3)\n"
+
+int al, a2, a3, ml, m2, m3;
+
+printf("Insira al: "); scanf("%d", &al);
+
+printf("Insira ml: ");
+
+scanf("%d", &m1);
+
+printf("Insira a2: "); scanf("%d", &a2);
+
+printf("Insira m2: ");
+
+scanf("%d", &m2);
+
+printf("Insira a3: "); scanf("%d", &a3);
+
+printf("Insira m3: "); scanf("%d", &m3);
+
+printf("x = %d\n", chines(al, ml, a2, m2, a3, m3)); return 0;
+
+}
